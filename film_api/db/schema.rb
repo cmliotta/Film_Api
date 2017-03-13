@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20170313013137) do
   create_table "ratings", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "film_id"
-    t.integer  "rating"
+    t.integer  "score"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
