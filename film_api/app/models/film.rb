@@ -5,6 +5,8 @@ class Film < ActiveRecord::Base
 
   has_many :ratings
 
+  scope :by_title, -> (value) { where('(title like ?)', "%#{value}%") }
+
   def average_rating
     ratings.sum(:score).to_f / ratings.count
   end
